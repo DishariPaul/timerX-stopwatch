@@ -134,14 +134,12 @@ body{
 }
 #watch h3{
     margin-top: 6px;
+    font-family: 'digital';
     font-weight: 700;
     font-size: 7rem;
     letter-spacing: 2px;
     color: var(--accent-2);
     text-shadow: 0 2px 8px rgba(77,64,190,0.07);
-}
-#timer{
-    font-family: 'digital';
 }
 #choices{
     display:flex;
@@ -282,3 +280,4 @@ body{
 button:focus { 
     box-shadow: 0 0 0 4px rgba(107,92,231,0.12); 
     outline: none; }
+
