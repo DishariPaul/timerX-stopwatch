@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>TimerX</title>
+</head>
+<body>
+    <div id="logo"><h1>TimerX</h1><p>stopwatch</p></div>
+    <button id="themeToggle" aria-pressed="false" >🌙</button>
+    <div class="container">
+        <div id="watch">
+            <h2>Timer</h2>
+            <h3 id="timer">00 : 00 : 00</h3>
+        </div>
+        <div id="choices">
+            <button id="start" onclick="startTimer()">Start</button>
+            <button id="pause" onclick="pauseTimer()">Pause</button>
+            <button id="reset" onclick="resetTimer()">Reset</button>
+        </div>
+        <button id="lap" onclick="recordLap(timer.innerHTML)">LAPS</button>
+    </div>
+    <div class="container-right">
+        <div class="lapRecord">
+        <h2 id="lapHead">Laps</h2>
+        <ul id="lapsCount" style="margin-bottom: 40px;"></ul>
+        </div>
+        <button id="clear" onclick="clearLap()">CLEAR</button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
