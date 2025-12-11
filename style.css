@@ -295,7 +295,7 @@ button:focus {
     justify-content: flex-start !important;
     padding-top: 25px;
   }
-  .container {margin-top: 25px !important; }
+  .container {margin-top: 35px !important; }
 }
 /* tablet*/
 @media (max-width: 768px) {
@@ -382,6 +382,7 @@ button:focus {
 }
   #lapHead { font-size: 1.8rem; }
 }
+
 
 
 
