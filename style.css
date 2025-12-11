@@ -76,7 +76,7 @@ body{
 }
 #logo {
     position: fixed;
-    top: 30px;
+    top: 20px;
     left: 20px;
     z-index: 999;
     font-size: 1rem;
@@ -382,6 +382,7 @@ button:focus {
 }
   #lapHead { font-size: 1.8rem; }
 }
+
 
 
 
