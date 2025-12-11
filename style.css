@@ -139,14 +139,12 @@ body{
 }
 #watch h3{
     margin-top: 6px;
+    font-family: 'digital';
     font-weight: 700;
     font-size: 95px;
     letter-spacing: 2px;
     color: var(--accent-2);
     text-shadow: 0 2px 8px rgba(77,64,190,0.07);
-}
-#timer{
-    font-family: 'digital';
 }
 #choices{
     display:flex;
@@ -286,6 +284,27 @@ button:focus {
 
 /* ===========RESPONSIVE DESIGN================== */
 /* large tablets / small desktops => none needed*/
+/* === allow vertical scroll and stop centering on smaller screens === */
+@media (max-width: 1024px) {
+  /* enable vertical scrolling for the page */
+  html, body {
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+
+  /* stop centering everything vertically on mobile/tablet */
+  body {
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    padding-top: 24px; /* a little breathing room */
+  }
+
+  /* don't clip the container */
+  .container {
+    margin-top: 20px !important; /* reduce big 100px offset */
+  }
+}
+
 /* tablet*/
 @media (max-width: 768px) {
   html, body {
@@ -371,6 +390,7 @@ button:focus {
 }
   #lapHead { font-size: 1.8rem; }
 }
+
 
 
 
