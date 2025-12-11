@@ -1,10 +1,19 @@
 @font-face {
     font-family: 'digital';
-    src: url("./digital-7.ttf") format('truetype');
+    src: url("./font/digital-7.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+/*Responsive Variables*/
+:root{
+  --watch-width: 520px;
+  --watch-height: 320px;
+  --watch-width-sm: 420px;
+  --watch-height-sm: 260px;
+  --watch-width-xs: 340px;
+  --watch-height-xs: 220px;
+}
 /* Theme variables*/
 :root{
     --bg-1: #eef2ff;
@@ -45,7 +54,6 @@ html[data-theme="dark"] {
 }
 
 
-
 *{ 
     box-sizing: border-box; 
     margin: 0; 
@@ -73,10 +81,11 @@ body{
     z-index: 999;
     font-size: 1rem;
     font-weight: 500;
-    line-height: 1.1;
+    line-height: 1;
     color: var(--logo);
     font-family: 'Inter', sans-serif;
 }
+#logo:hover{ cursor:default;}
 #themeToggle{
     position: fixed;
     top: 18px;
@@ -104,14 +113,11 @@ body{
     justify-items: center;
     margin-top: 100px;
 }
-@media (max-width: 880px){  .container { padding-top: 28px; gap: 20px; }    }
-
 #watch{
     position: relative;
     width: clamp(320px, 70vw, var(--watch-width));
     height: clamp(220px, 36vw, var(--watch-height));
     border-radius: 40px;
-    padding: 50px 80px 50px 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,19 +132,21 @@ body{
 }
 #watch h2{
     margin: 0;
-    font-size: 1.05rem;
+    font-size: 20px;
     font-weight: 600;
     color: var(--logo);
     letter-spacing: 0.6px;
 }
 #watch h3{
     margin-top: 6px;
-    font-family: 'digital';
     font-weight: 700;
-    font-size: 7rem;
+    font-size: 95px;
     letter-spacing: 2px;
     color: var(--accent-2);
     text-shadow: 0 2px 8px rgba(77,64,190,0.07);
+}
+#timer{
+    font-family: 'digital';
 }
 #choices{
     display:flex;
@@ -154,7 +162,7 @@ body{
   justify-content: center;
 }
 /* common button style */
-#choices button, #lap{
+#choices button{
     cursor: pointer;
     border: none;
     outline: none;
@@ -185,6 +193,7 @@ body{
 #lap, #clear{   /*the button design only*/
     border-radius: 12px;
     padding: 15px 25px;
+    font-weight: 600;
     font-size: 0.98rem;
     background:  var(--bg-1);
     border: none;
@@ -192,7 +201,7 @@ body{
     backdrop-filter: blur(4px);
     align-self: center;
     width: auto;
-    margin: 30px 0 70px 0;
+    margin: 30px 0 100px 0;
 }
 #choices button:hover{
     transform: translateY(-4px);
@@ -275,12 +284,11 @@ button:focus {
     outline: none; }
 
 
-
 /* ===========RESPONSIVE DESIGN================== */
 /* large tablets / small desktops */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .container {
-    max-width: 900px;
+    max-width: 1000px;
     gap: 28px;
     margin-top: 70px;
   }
@@ -298,10 +306,14 @@ button:focus {
   }
   #lapsCount {max-width: 320px;}
   .lapRecord { max-height: 380px; }
-}
+} */
 /* tablet*/
 @media (max-width: 768px) {
-  body {padding: 28px 14px; overflow-x: auto;}
+  body {
+    flex-direction: column;
+    padding: 28px 14px; 
+    overflow-x: auto;
+  }
   body::-webkit-scrollbar { width: 8px; }
   body::-webkit-scrollbar-track { border-radius: 14px; }
   body::-webkit-scrollbar-thumb { border-radius: 14px; }
@@ -340,7 +352,12 @@ button:focus {
 }
 /* small phones */
 @media (max-width: 420px) {
-  .container { margin-top: 40px; gap: 18px; padding: 0 8px; }
+  .container { 
+    flex-direction: column;
+    margin-top: 40px; 
+    gap: 18px; 
+    padding: 0 8px; 
+  }
   #watch {
     width: var(--watch-width-xs);
     height: var(--watch-height-xs);
@@ -375,7 +392,3 @@ button:focus {
 }
   #lapHead { font-size: 1.8rem; }
 }
-
-
-
-
