@@ -285,34 +285,16 @@ button:focus {
 
 
 /* ===========RESPONSIVE DESIGN================== */
-/* large tablets / small desktops */
-/* @media (max-width: 1024px) {
-  .container {
-    max-width: 1000px;
-    gap: 28px;
-    margin-top: 70px;
-  }
-  #watch {
-    width: clamp(320px, 62vw, var(--watch-width));
-    height: clamp(220px, 34vw, var(--watch-height));
-    margin-top: 30px;
-    padding: 40px 60px;
-  }
-  #watch h3 {font-size: 5.6rem;}
-  #choices {
-    max-width: 320px;
-    gap: 16px;
-    padding: 0 6px;
-  }
-  #lapsCount {max-width: 320px;}
-  .lapRecord { max-height: 380px; }
-} */
+/* large tablets / small desktops => none needed*/
 /* tablet*/
 @media (max-width: 768px) {
+  html, body {
+    overflow-y: auto; 
+  }
   body {
     flex-direction: column;
     padding: 28px 14px; 
-    overflow-x: auto;
+    overflow-x: hidden;
   }
   body::-webkit-scrollbar { width: 8px; }
   body::-webkit-scrollbar-track { border-radius: 14px; }
@@ -320,6 +302,8 @@ button:focus {
   .container {
     gap: 20px;
     margin-top: 56px;
+  }
+  .container {
     flex-direction: column;
     align-items: center;
   }
@@ -350,14 +334,6 @@ button:focus {
 }
 /* small phones */
 @media (max-width: 420px) {
-  body {
-    flex-direction: column;
-    padding: 28px 14px; 
-    overflow-x: auto;
-  }
-  body::-webkit-scrollbar { width: 8px; }
-  body::-webkit-scrollbar-track { border-radius: 14px; }
-  body::-webkit-scrollbar-thumb { border-radius: 14px; }
   .container { 
     flex-direction: column;
     margin-top: 40px; 
