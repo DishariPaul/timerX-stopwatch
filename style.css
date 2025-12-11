@@ -225,6 +225,7 @@ body{
     padding: 40px;
     border-radius: 30px;
     overflow-y: auto;
+    width: 300px;
     max-height: 400px;
 }
 .lapRecord::-webkit-scrollbar {
@@ -385,6 +386,7 @@ button:focus {
 }
   #lapHead { font-size: 1.8rem; }
 }
+
 
 
 
