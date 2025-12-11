@@ -284,8 +284,6 @@ button:focus {
 
 
 /* ===========RESPONSIVE DESIGN================== */
-/* large tablets / small desktops => none needed*/
-/* === allow vertical scroll and stop centering on smaller screens === */
 @media (max-width: 1024px) {
   html, body {
     overflow-y: auto !important;
@@ -386,6 +384,7 @@ button:focus {
 }
   #lapHead { font-size: 1.8rem; }
 }
+
 
 
 
